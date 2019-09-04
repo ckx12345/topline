@@ -4,7 +4,7 @@ import JSONbig from 'json-bigint'
 // 建立一个常量
 const request = axios.create({
   // 设置基础端口
-  baseURL: 'http//ttapi.research.itcast.cn'
+  baseURL: 'http://ttapi.research.itcast.cn'
 })
 //  大数字转化在响应前所以需要在之前就引用并安装
 request.defaults.transformResponse = [function (data) {

@@ -1,11 +1,16 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import login from '../views/login' // 引入login组件
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
-    //
+    {
+      name: 'login',
+      path: '/login', // 输入框地址
+      component: login // 组件地址
+    }
     // {
     //   path: '/about',
     //   name: 'about',
