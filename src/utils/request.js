@@ -25,8 +25,9 @@ function (error) {
   return Promise.reject(error)
 })
 // 后置守卫
-request.interceptors.response.use(function (config) {
-  return config
+request.interceptors.response.use(function (response) {
+  // 根据接口可以看出data所以简化data
+  return response.data.data || response.data
 },
 function (error) {
   return Promise.reject(error)

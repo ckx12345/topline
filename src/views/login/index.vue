@@ -32,10 +32,14 @@ export default {
     // 返回promise类型的对象 使用try接收
       try {
         //   使用 async将异步并不是变成了同步类型的 而是使用了 await 会阻塞下面的操作所以变成了同步这样数据不会混乱
-        const res = await login(this.user)
-        console.log(res)
+        const data = await login(this.user)
+        // 存储数据到vueX
+        this.$store.commit('setUser', data)
+        // 登陆成功跳转首页
+        this.$router.push('/')
+        this.$toast.success('登录成功')
       } catch (err) {
-        console.log(err)
+        this.$toast.fail('登录失败')
       }
     }
   }
