@@ -1,6 +1,6 @@
 <!--  -->
 <template>
-<div>分支</div>
+<div class='dd'>本地分支推送到远程分支的</div>
 </template>
 
 <script>
